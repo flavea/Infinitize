@@ -1,0 +1,290 @@
+	#inspirit-page {
+		background: url(http://i.imgur.com/CBC0ImX.jpg) bottom center #000000;
+		background-size: 100% auto;
+		position:fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color:#ddce12;
+		font-size: 1.5em;
+	}		
+
+	#inspirit-box {
+		position: fixed;
+		width:80%;
+		left: 10%;
+		top: 35%;
+		color: #ddce12;
+		font-family: 'Montserrat', sans-serif;
+		font-size: .9em;
+		z-index: 999999999999999;
+	}
+
+	.title {
+		font-family: "True Lies", Serif;
+		font-size: 5em;
+		color: #ddce12;
+	}
+
+	#term {
+		float: left;
+		border-right:2px solid #ddce12;
+		margin-right: 3em;
+		padding-right: 3em;
+	}
+
+	#social-media {
+		position: fixed;
+		top: 1em;
+		left: 2em;
+		z-index: 1;
+		width:calc(100% - 4em);
+	}
+
+	#ms-links {
+		float: right;
+		margin-right: 1em;
+	}
+
+	#ms-links a, #ms a {
+		color: #ddce12;
+		padding:0.5em;
+		border: 2px solid #ddce12;
+		border-radius: 100%;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		position: relative;
+	}
+
+	#ms-links a:last-child:after {
+		width: 1em;
+		height: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		top: 50%;
+		right:calc( -1em - 2px);
+	}
+
+	#ms a {
+		margin: 1em 0.2em;
+	}
+
+	#social-media::before {
+		width: calc(100% - 2em * 6 - 4px * 6 - 2.3em);
+		height: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		top: 50%;
+	}
+
+	#about {
+		position: fixed;
+		top: 1em;
+		left: 2em;
+		z-index: 1;
+		height: calc(100%);
+		color: #ddce12;
+	}
+
+	#about::before {
+		height: calc(45% - 7em);
+		width: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		top: 1.1em;
+	}
+
+	#about::after {
+		height: calc(45% - 6em);
+		width: 2px;
+		background: #ddce12;
+		content: "";
+		position: fixed;
+		bottom: 2em;
+	}
+
+	#about-tag {
+		width: 12em;
+		font-family: "Bebas Neue";
+		font-weight: 600;
+		letter-spacing: 5px;
+	    -webkit-transform: rotate(-90deg);
+	    -moz-transform: rotate(-90deg);
+	    -o-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	    transform: rotate(-90deg);
+	    position: absolute;
+	    top:calc(45% + 0.5em);
+	    left:-6.5em;
+	    height: 0em;
+	    color: #ddce12
+	}
+
+	#inspirit {
+		position: fixed;
+		top: 1em;
+		right: 2em;
+		z-index: 1;
+		height: calc(100%);
+		color: #ddce12;
+	}
+
+	#inspirit::before {
+		height: calc(45% - 7em);
+		width: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		top: 1.1em;
+	}
+
+	#inspirit::after {
+		height: calc(45% - 6em);
+		width: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		bottom: 3em;
+	}
+
+	#inspirit-tag {
+		width: 12em;
+		font-family: "Bebas Neue";
+		font-weight: 600;
+		letter-spacing: 5px;
+	    -webkit-transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -o-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    position: absolute;
+	    top:calc(45% + 1em);
+	    left:-5.5em;
+	    color: #ddce12;
+	    height: 0em;
+	}
+
+	#bullet-menu {
+		width: calc(100% - 4em);position: fixed;
+		bottom: 0.5em;
+		right: 2em;
+		z-index: 1;
+	}
+
+	#bullet-menu ul {
+		list-style: none;
+		margin: 0px!important;
+		padding: 0px!important;
+	}
+
+	#bullet-menu ul li {
+		width: calc(100% / 8.2);
+		display: inline-block;
+		position: relative;
+	}
+
+	#bullet-menu li a {
+		color: #ddce12;
+		font-family: "True Lies", Serif;
+		font-size: 1.3em;
+		padding:0.7em 0.5em 0.3em 0.5em;
+		border:2px solid #ddce12;
+		display: block;
+		width:1.3em;
+		height: 1.3em;
+		border-radius: 100%;
+	}
+
+	#bullet-menu ul li::before {
+		width: calc(50% - 1.4em);
+		height: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		left: calc( -2px);
+		top:50%;
+	}
+
+	#bullet-menu ul li::after {
+		width: calc(50% - 1.4em);
+		height: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		right: calc( -2px);
+		top:50%;
+	}
+
+	.hint {
+		position: absolute;
+		font-family: 'Montserrat', sans-serif;
+		top: -70px;
+		color: #ddce12;
+		text-align: center;
+		padding: 0.5em;
+		border: 2px solid #ddce12;
+		width: calc(100% - 2em);
+		left: 0.3em;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+
+	.hint:after {
+		width: 2px;
+		background: #ddce12;
+		content: "";
+		position: absolute;
+		bottom:-33px;
+		left: 50%;
+		transition: 1s;
+		height: 1px
+	}
+
+	#bullet-menu ul li:hover .hint {
+		background: #000000;
+  		visibility: visible;
+  		opacity: 1;
+	}
+
+	#bullet-menu ul li:hover .hint:after {
+		height: calc(50px - 1em - 2px);
+	}
+
+	#mobile-menu-front, #menu-tag {
+		color: #ddce12;
+	}
+
+	#menu-tag {
+		border: 2px solid #ddce12;
+	}
+
+
+	#mobile-menu-front::before, #mobile-menu-front::after {
+		background: #ddce12;
+	}
+
+	@media (max-width: 600px) {
+
+
+		#inspirit-box {
+			font-size: .5em!important;
+			width: 60%!important;
+			margin: auto;
+			left: 5em;
+		}
+
+		#term {
+			font-size: .8em!important;
+			width: 100%;
+			border: none;
+			margin-bottom: 2em;
+
+		}
+	}

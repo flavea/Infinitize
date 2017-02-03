@@ -1,0 +1,128 @@
+#concerts {
+	background-image:url(http://i.imgur.com/GiCuINy.jpg);
+}
+
+#concert-wrap {
+	padding: 3em;
+	border: 1px solid #ffffff;
+	margin: 5em;
+}
+
+#concert-wrap h1 {
+	width: 6em;
+	background: #ffffff;
+	margin-top:-1.75em;
+	color: #151515;
+	padding: 0.2em;
+}
+
+.concert {
+	width: 44%;
+	height: 150px;
+	display: inline-block;
+	margin: 2%;
+	background: #ffffff;
+	vertical-align: top;
+	position: relative;
+}
+
+.concert-inside {
+	width: calc(100% + 2em);
+	height: calc(100% + 2em);
+	border: 1px solid #cccccc;
+	position: absolute;
+	margin-top:-1em;
+	margin-left:-1em;
+	text-align: center;
+	transition: 1s;
+}
+
+.concert-inside > span {
+	color: #ffffff;
+	text-shadow: 2px 2px 0px #000000;
+	margin: 60px auto 40px auto;
+	display: block;
+	font-size: 2em;
+	transition: 1s;
+}
+
+.concert:hover .concert-inside > span {
+	margin: 20px auto 10px auto;
+}
+
+.concert a {
+	padding: 0.1em 1em;	display: inline-block;
+	opacity: 0;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.concert:hover a {
+	opacity: 1;
+}
+
+.concert:hover 
+	.concert-inside {
+	width: calc(100% - 2em);
+	height: calc(100% - 2em);
+	border: 1px solid #cccccc;
+	position: absolute;
+	margin-top:1em;
+	margin-left:1em;
+	background: rgba(0,0,0,.6)
+	}
+
+
+@media (max-width: 800px) {
+
+	#concert-wrap {
+		margin: 3em 2em;
+	}
+	.concert {
+		width: 100%!important;
+		margin: 2em auto;
+		display: block;
+	}
+
+	#concert-wrap h1 {
+		width: 4em;
+		background: #ffffff;
+		margin-top:-1.5em;
+		font-size: 3em!important;
+	}
+}
+
+@media (max-width: 600px) {
+	#concerts {
+		background-size: auto 100%;
+		background-position: center;
+	}
+
+
+	#concert-wrap {
+		margin: 1em 1em;
+	}
+
+	#concert-wrap h1 {
+		width: auto;
+		top: 0.5em;
+		font-size: 2em!important;
+		position: relative;
+		background: transparent;
+		color: #ffffff;
+	}
+
+	.concert {
+		height: 180px;
+	}
+
+	.concert-inside > span {
+		margin: 80px auto 40px auto;
+		font-size: 1.5em;
+	}
+
+	.concert a {
+		font-size: .9em;
+	}
+
+}

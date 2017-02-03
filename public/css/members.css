@@ -1,0 +1,406 @@
+#members {
+	overflow: hidden;
+}
+
+#navigation {
+	position: fixed;
+	left: 1em;
+	bottom: 0em;
+	z-index: 999999;
+	width: 14px;
+}
+
+#navigation a {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin-bottom: 3em;
+	position: relative;
+	transition: 1s;
+}
+
+#navigation a:hover, .clicked {
+	background: #ffffff;
+}
+
+#navigation a:after {
+	content: "";
+	width: 2px;
+	height: 3em;
+	background: #ffffff;
+	position: absolute;
+	bottom: calc(-3em - 2px);
+	left: 50%;
+	margin-left: -1px;
+}
+
+#navigation a:last-child {
+	margin-bottom: 6em;
+}
+
+#navigation a:last-child:after {
+	height: 6em;
+	bottom: calc(-6em - 2px);
+}
+
+.absolute {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+
+#members #member-info {
+	position: absolute;
+	z-index: 99999999999;
+}
+
+.name {
+	font-family: "Bebas Neue";
+	font-size: 5em;
+}
+
+.quote {
+	font-family: "Georgia", sans-serif;
+	font-style: italic;
+	position: relative;
+	margin: 0.5em auto 2em auto;
+	padding-left: 5em;
+}
+
+.quote:before {
+	content: '\201C';
+	float: left;
+	position: absolute;
+	font-size: 7em;
+	height: 100%;
+	border-right:1px solid #ffffff;
+	padding-right: 0.2em;
+	left:0em;
+}
+
+#header {
+	width: 100%;
+	margin-top: 20%;
+	background: rgba(0,0,0,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(0%, rgba(0,0,0,0)), color-stop(0%, rgba(0,0,0,0)), color-stop(75%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+	padding-bottom: 50px;
+}
+
+#header #member-info {
+	width: 50%;
+	margin: 10% 0 0 5%;
+	position: relative;
+}
+
+#member-info #ms-links {
+	text-align: center;
+	margin: 1em auto;
+}
+
+#member-info #ms-links a {
+	display: inline-block;
+	padding: 0.5em;
+	width: 1em;
+	height: 1em;
+	border-radius: 100%;
+	border: 2px solid #ffffff;
+}
+
+.sunggyu {
+	background: url(http://i.imgur.com/GLhthKX.jpg) #000000;
+	background-size: auto 100%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#sunggyu {
+	margin-top: 0%;
+}
+
+#sunggyu #member-info {
+	top:6em;
+	left: 6em;
+	width: 40em;
+}
+
+.dongwoo {
+	background: url(http://i.imgur.com/ODEBRW0.jpg) #730c0d;
+	background-size: auto 100%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#dongwoo {
+	margin-top: 50%;
+}
+
+.woohyun {
+	background: url(http://i.imgur.com/1v1egkT.jpg) #5b5b5b;
+	background-size: 100% auto;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#woohyun {
+	margin-top: 100%;
+}
+
+#woohyun #member-info {
+	top:5em;
+	right: 2em;
+	width: 40em;
+}
+
+.hoya {
+
+	background: url(http://i.imgur.com/KEgwUWs.jpg) #730c0d;
+	background-size: auto 100%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#hoya {
+	margin-top: 150%;
+}
+
+#hoya #member-info, #sungyeol #member-info, #l #member-info, #dongwoo #member-info {
+
+	top:6em;
+	left: 10em;
+	width: 30em;
+}
+
+.sungyeol {
+	background: url(http://i.imgur.com/bSrwwYW.jpg) #5b5b5b;
+	background-size: 100% auto;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+#sungyeol {
+	margin-top: 200%;
+}
+
+.sungjong {
+	background: url(http://i.imgur.com/WmqWvw4.jpg) #5b5b5b;
+	background-size: 100% auto;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+#sungjong {
+	margin-top: 300%;
+}
+
+#sungjong #member-info {
+	top:5em;
+	left: 5em;
+	width: 38em;
+}
+
+.l {
+	background: url(http://i.imgur.com/cGxfC14.jpg) #5d0909;
+	background-size: auto 100%;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#l {
+	margin-top: 250%;
+}
+
+.member-box {
+	position: absolute;
+	min-height: 100%;
+	background-size: auto 100%;
+}
+
+#member-detail {
+	padding: 5%;
+	background: #000000;
+	width:60%;
+	margin:0 auto;
+}
+
+.member-box section {
+	margin-bottom: 70px;
+}
+
+.member-box h1 {
+	font-size: 2.1em;
+}
+
+.member_disco {
+	display: inline-block;
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+	background: #ffffff;
+	margin: 0.5em;
+	vertical-align: top;
+}
+
+#sm {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#sm a {
+	color: #ffffff;
+	padding: 0.5em;
+	border:2px solid #ffffff;
+	border-radius: 100%;
+	display: inline-block;
+}
+
+.dramas {
+	width: 150px;
+}
+
+@media (max-width: 900px) and (min-height: 800px) {
+
+
+	#sunggyu, #dongwoo, #woohyun, #hoya, #sungyeol, #l, #sungjong, .sunggyu, .dongwoo, .woohyun, .hoya, .sungyeol, .l, .sungjong {
+		background-size: auto 100%;
+		background-position: top right;
+		margin-bottom: 0;
+		margin-top:0;
+
+	}
+
+	#woohyun {
+
+		background-position: top left;
+
+	}
+
+
+	#member-info, #sunggyu #member-info, #dongwoo #member-info, #woohyun #member-info, #hoya #member-info, #sungyeol #member-info, #l #member-info, #sungjong #member-info {
+		margin-top: 30%;
+	}
+}
+
+@media (max-width: 600px) and (min-height: 790px) {
+
+
+	#sunggyu, #dongwoo, #woohyun, #hoya, #sungyeol, #l, #sungjong, .sunggyu, .dongwoo, .woohyun, .hoya, .sungyeol, .l, .sungjong {
+		background-size: 100% auto;
+		background-position: top right;
+		margin-bottom: 0;
+		margin-top:0;
+	}
+}
+
+@media (max-width: 600px) {
+
+	#header {
+		padding-bottom: 30px;
+	}
+
+	#header #member-info {
+		width: 80%!important;
+		margin: 0 auto;
+	}
+
+	#members {
+		overflow: auto;
+	}
+
+	#member-info, #sunggyu #member-info, #dongwoo #member-info, #woohyun #member-info, #hoya #member-info, #sungyeol #member-info, #l #member-info, #sungjong #member-info {
+		width: 90%!important;
+		left: 2em;
+		height: 100%;
+	}
+
+
+	#sunggyu, #dongwoo, #woohyun, #hoya, #sungyeol, #l, #sungjong, .sunggyu, .dongwoo, .woohyun, .hoya, .sungyeol, .l, .sungjong {
+		background-size: auto 100%;
+		background-position: top right;
+		margin-bottom: 0;
+		margin-top:0;
+	}
+
+	.dongwoo {
+		background: url(http://i.imgur.com/mWai0HG.jpg) #730c0d;
+	}
+
+	.hoya {
+		background: url(http://i.imgur.com/gtmc8Rr.jpg) #730c0d;
+	}
+
+	.l {
+		background: url(http://i.imgur.com/l0T8nyq.jpg) #5d0909;
+	}
+
+	.sunggyu {
+		background: url(http://i.imgur.com/ZKSlpZR.jpg) #000000;
+	}
+
+	.sungjong {
+		background: url(http://i.imgur.com/3oY7Lu3.jpg) #5b5b5b;
+	}
+
+	.sungyeol {
+		background: url(http://i.imgur.com/mTNWK43.jpg) #5b5b5b;
+	}
+
+	.woohyun {
+		background: url(http://i.imgur.com/hKbtrAU.jpg) #5b5b5b;
+	}
+
+	.name {
+		font-size: 3em;
+	}
+
+	#navigation {
+		display: none;
+	}
+}
+
+@media (max-width: 400px) {
+
+	.member_disco, .dramas {
+		width: calc(50% - 20px - 2em);
+	}
+	.quote {
+		display: none;
+	}
+
+	#header {
+		margin-top: 50%;
+	}
+
+	#header .quote {
+		display: block;
+		margin: 0.5em auto 2em auto;
+		padding-left: 0em;
+		}
+
+	.quote:before {
+		content: '';
+		border-right:1px solid transparent;
+	}
+
+
+	#member-info, #sunggyu #member-info, #dongwoo #member-info, #woohyun #member-info, #hoya #member-info, #sungyeol #member-info, #l #member-info, #sungjong #member-info {
+		width: 90%!important;
+		left: 2em;
+		height: 100%;
+	}
+	
+	
+	#member-detail {
+		padding: 5%;
+		background: #000000;
+		width:90%;
+		margin:0 auto;
+	}
+}

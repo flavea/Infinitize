@@ -1,0 +1,228 @@
+	#front-page {
+		background-image:url(http://i.imgur.com/GbQw5hM.jpg);
+
+	}
+
+	#front-box {
+		position: fixed;
+		width:35%;
+		right: 20%;
+		bottom: 15%;
+		font-size: .9em;
+	}
+
+	.title {
+		font-family: "True Lies", Serif;
+		font-size: 8em;
+		color: #ffffff;
+	}
+
+	#social-media {
+		position: fixed;
+		top: 1em;
+		left: 2em;
+		z-index: 1;
+		width:calc(100% - 4em);
+	}
+
+	#ms-links {
+		float: right;
+		margin-right: 1em;
+	}
+
+	#ms-links a, #ms a {
+		color: #ffffff;
+		padding:0.5em;
+		border: 2px solid #ffffff;
+		border-radius: 100%;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		position: relative;
+	}
+
+	#ms-links a:last-child:after {
+		width: 1em;
+		height: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		top: 50%;
+		right:calc( -1em - 2px);
+	}
+
+	#ms a {
+		margin: 1em 0.2em;
+	}
+
+	#social-media::before {
+		width: calc(100% - 2em * 6 - 4px * 6 - 2.3em);
+		height: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		top: 50%;
+	}
+
+	#about {
+		position: fixed;
+		top: 1em;
+		left: 2em;
+		z-index: 1;
+		height: 100%;
+		color: #ffffff;
+	}
+
+	#about::before {
+		height: calc(45% - 7em);
+		width: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		top: 1.1em;
+	}
+
+	#about::after {
+		height: calc(45% - 6em);
+		width: 2px;
+		background: #ffffff;
+		content: "";
+		position: fixed;
+		bottom: 2em;
+	}
+
+	#about-tag {
+		width: 12em;
+		letter-spacing: 5px;
+	    position: absolute;
+	    top:calc(45% + 0.5em);
+	    left:-6.5em;
+	    height: 0em;
+	    color: #ffffff;
+	}
+
+	#inspirit {
+		position: fixed;
+		top: 1em;
+		right: 2em;
+		z-index: 1;
+		height: 100%;
+	}
+
+	#inspirit::before {
+		height: calc(45% - 7em);
+		width: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		top: 1.1em;
+	}
+
+	#inspirit::after {
+		height: calc(45% - 6em);
+		width: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		bottom: 3em;
+	}
+
+	#inspirit-tag {
+		width: 12em;
+		letter-spacing: 5px;
+	    position: absolute;
+	    top:calc(45% + 1em);
+	    left:-5.5em;
+	    height: 0em;
+	    color: #ffffff;
+	}
+
+	#bullet-menu {
+		width: calc(100% - 4em);
+		position: fixed;
+		bottom: 0.5em;
+		right: 2em;
+		z-index: 1;
+	}
+
+	#bullet-menu ul {
+		list-style: none;
+		margin: 0px!important;
+		padding: 0px!important;
+	}
+
+	#bullet-menu ul li {
+		width: calc(100% / 8.2);
+		display: inline-block;
+		position: relative;
+	}
+
+	#bullet-menu li a {
+		color: #ffffff;
+		font-family: "True Lies", Serif;
+		font-size: 1.3em;
+		padding:0.7em 0.5em 0.3em 0.5em;
+		display: block;
+		width:1.3em;
+		height: 1.3em;
+		border-radius: 100%;
+	}
+
+	#bullet-menu ul li::before {
+		width: calc(50% - 1.4em);
+		height: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		left: calc( -2px);
+		top:50%;
+	}
+
+	#bullet-menu ul li::after {
+		width: calc(50% - 1.4em);
+		height: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		right: calc( -2px);
+		top:50%;
+	}
+
+	.hint {
+		position: absolute;
+		font-family: 'Montserrat', sans-serif;
+		top: -70px;
+		color: #ffffff;
+		text-align: center;
+		padding: 0.5em;
+		border: 2px solid #ffffff;
+		width: calc(100% - 2em);
+		left: 0.3em;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 0.5s linear;
+	}
+
+	.hint:after {
+		width: 2px;
+		background: #ffffff;
+		content: "";
+		position: absolute;
+		bottom:-33px;
+		left: 50%;
+		transition: 1s;
+		height: 1px
+	}
+
+	#bullet-menu ul li:hover .hint {
+		background: #700909;
+  		visibility: visible;
+  		opacity: 1;
+	}
+
+	#bullet-menu ul li:hover .hint:after {
+		height: calc(50px - 1em - 2px);
+	}
+	
+	

@@ -1,0 +1,453 @@
+	
+
+	@font-face {
+		font-family: 'True Lies';
+		src: url('../fonts/TrueLies.eot');
+		src: local('TrueLies'), url('../fonts/TrueLies.woff') format('woff'), url('../fonts/TrueLies.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Bebas Neue';
+		src: url('../fonts/BebasNeue.eot');
+		src: local('BebasNeue'), url('../fonts/BebasNeue.woff') format('woff'), url('../fonts/BebasNeue.ttf') format('truetype');
+	}
+
+	html, body {
+		background: #000000;
+		font-size: 1em;
+		padding: 0;
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+		color: #ffffff;
+	}
+
+	a, .opener, .close {
+		cursor:crosshair;
+	}
+
+	body::before {
+		content: '';
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		opacity: 0;
+		background:url(http://i.imgur.com/t3pdYUe.gif) center no-repeat fixed #000000;
+		z-index: 999999999999999999999999999999;
+		top: 0;
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+		-o-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	body.page-is-changing::before {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-transition: -webkit-transform 0.4s 0s;
+		-moz-transition: -moz-transform 0.4s 0s;
+		transition: transform 0.4s 0s;
+		opacity: 1;
+	}
+
+	.cd-cover-layer {
+		position: fixed;
+		left: 0%;
+		top: 0%;
+		bottom: auto;
+		right: auto;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		background-color: #000000;
+		-webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+		-moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+		transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+	}
+
+	.page-is-changing .cd-cover-layer {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+		-moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+		transition: opacity 0.3s 0s, visibility 0s 0s;
+	}
+
+	::-moz-selection { /* Code for Firefox */
+		color: #700909;
+		background: black;
+	}
+
+	::selection {
+		color: #700909;
+		background: black;
+	}
+
+	a {
+		color: #700909;
+		text-decoration: none;
+	}
+
+	.fixed {
+		position:fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	#mobile-menu-front {
+		display: none;
+		position: fixed;
+		bottom:1.2em;
+		left: 2em;
+		color: #ffffff;
+		width: calc(100% - 4em);
+		z-index: 1;
+	}
+
+	#menu-tag {
+		width: 3em;
+		color: #ffffff;
+		font-family: "Bebas Neue";
+		font-weight: 600;
+		letter-spacing: 5px;
+		margin: auto;
+		display: block;
+		text-align: center;
+		border:2px solid #ffffff;
+		padding:0.2em 0.5em 0.1em 0.8em;
+	}
+
+	#mobile-menu-front::before {
+		width: calc(50% - 2.2em);
+		content: "";
+		position: absolute;
+		top:50%;
+		left: 0;
+		height: 2px;
+		background: #ffffff;
+	}
+
+	#mobile-menu-front::after {
+		width: calc(50% - 2em);
+		content: "";
+		position: absolute;
+		top:50%;
+		right: -2px;
+		height: 2px;
+		background: #ffffff;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.modal-menu {
+		position: fixed;
+		top: -100%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+		height: 100%;
+		overflow: hidden;
+		background: #000000;
+	}
+
+	.modal-menu > #menu-content {
+		position: relative;
+	}
+
+	.modal-menu > #menu-content > #main-menu > a {
+		width:55%;
+		display: block;
+		font-family: "True Lies", Serif;
+		font-size: 3em;
+		color: #ffffff;
+	}
+
+	#secondary-menu {
+		width: 25%;
+		margin-top:-30%;
+		margin-right: 10%;
+	}
+
+	.menu {
+		background: #700909;
+		color: #ffffff;
+		width: 40%;
+		padding: 50px 0;
+		margin: 0.5em;
+		vertical-align: middle;
+		display: inline-block;
+		text-align: center;
+	}
+
+	.modal-menu > #menu-content > #main-menu > a::before {
+
+		float: left;
+		height:3px;
+		width: 5%;
+		background: #ffffff;
+		content: "";
+		margin-top: 0.5em;
+		margin-right: 0.5em;
+		-webkit-transition: width 400ms ease-in;
+		-moz-transition: width 400ms ease-in;
+		transition: width 400ms ease-in;
+	}
+
+	.modal-menu > #menu-content > #main-menu > a:hover::before {
+		display: inline-block;
+		width: 15%;
+	}
+
+	.big-menu-bg {
+		background: url(http://i.imgur.com/rTXWIhW.jpg) top center #000000;
+		background-size: 100% auto;
+	}
+
+	.about-bg {
+		background: url(http://i.imgur.com/GiCuINy.jpg) top center #000000;
+		background-size: 100% auto;
+	}
+
+
+	.c-menu {
+		margin-top:2.5em;
+		margin-right:1.5em;
+		background:#000000
+	}
+
+	#site-tag {
+		color: #ffffff;
+		font-family: "Bebas Neue";
+		font-weight: 600;
+		letter-spacing: 5px;
+		margin:1em 0 5% 0;
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+
+	#credit {
+		position: absolute;
+		bottom: 1em;
+		text-align: center;
+		color: #ffffff;
+		font-family: "Bebas Neue";
+		font-weight: 600;
+		letter-spacing: 5px;
+		width: 100%;
+	}
+
+	#about-content {
+		width: 30%;
+		margin: 13% auto;
+		text-align: center;
+	}
+
+	#about-content .modal-title {
+		font-family: "True Lies", Serif;
+		font-size: 4em;
+		color: #ffffff;
+	}
+
+	.button {
+		border: 1px solid #3a0606;
+		padding: 0.5em;
+		color: #3a0606;
+		display: block;
+		margin: 1em;
+	}
+
+	#hamburger {
+		width: 2em;
+		height: 2em;
+		padding: 0.5em;
+		border-radius: 100%;
+		border: 2px solid #ffffff;
+		display: block;
+		position: fixed;
+		top:1em;
+		right: 2em;
+		z-index: 9999999999999999999999999999999999999999999999999999;
+	}
+
+	#hamburger span, .opener span {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #ffffff;
+		position: relative;
+		margin: 15px auto;
+		-webkit-transition: all 0.4s 0s;
+		-moz-transition: all 0.4s 0s;
+		transition: all 0.4s 0s;
+	}
+
+	#hamburger span:before, .opener span:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top:-8px;
+		width: 100%;
+		height: 2px;
+		background: #ffffff;
+		-webkit-transition: all 0.4s 0s;
+		-moz-transition: all 0.4s 0s;
+		transition: all 0.4s 0s;
+	}
+
+	#hamburger span:after, .opener span:before {
+		content: "";
+		position: absolute;
+		display: block;
+		top:8px;
+		width: 100%;
+		height: 2px;
+		background: #ffffff;
+		-webkit-transition: all 0.4s 0s;
+		-moz-transition: all 0.4s 0s;
+		transition: all 0.4s 0s;
+	}
+
+	#hamburger:hover span, .close span {
+		background: transparent!important;
+	}
+
+	#hamburger:hover span:before, .close span:before {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		margin-top: 25%;
+	}
+
+	#hamburger:hover span:after, .close span:after {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		margin-top: -25%;
+	}
+
+	.valign {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.active {
+		opacity: 1!important;
+		display: block!important;
+	}
+
+	.inactive {
+		opacity: 0!important;
+		display: none!important;
+	}
+
+	.space {
+		height: 2em;
+	}
+
+	.right {float: right};
+	.left {float: left}
+
+	.rep-bg {
+		background: url(http://i.imgur.com/lIr4zXw.gif);
+	}
+
+	.rotate-min {
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.rotate {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	.clean::after {
+		clear: both;
+		display: table;
+		content: "";
+	}
+
+	.half { width: 50%; }
+	.overflow: { overflow: auto;}
+	.inline { display: inline-block;}
+
+	.playfair {
+		font-family: "Playfair Display", sans-serif;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	.bebas {
+		font-family: "Bebas Neue", sans-serif;
+		font-weight: bold;
+	}
+
+	.true {
+		font-family: "True Lies";
+		font-size: 3em;
+	}
+
+	.white-border {
+		border: 2px solid #ffffff;
+	}
+
+	.var-title {
+		font-size: 6em;
+		display: block;
+	}
+
+	.red {color: #700909;}
+
+	.padding { padding:0.5em; }
+	.red-border {border: 1px solid #700909;}
+	.block {display: block;}
+	.fix-left {position: fixed;top: 0;left: 0}
+	.fix-right {position: fixed;top: 0;right: 0}
+	.white {color: #ffffff;}
+	.margin { margin:0.5em 0;
+		display: inline-block;}
+	.big {
+		font-size: 1.3em;
+		padding-left: 0.5em;
+	}
+
+	.big i {
+		border-left: 2px solid #ffffff;
+		padding: 0.5em 0.5em 0.5em 0.5em;margin-left: 1.5em;
+	}
+
+	.boxes {
+		width: 25%;
+		margin-right: 5%;
+		display: inline-block;
+		font-size: .8em;
+		vertical-align: top;
+		border-bottom: 1px solid #ccc;
+	}
+
+	#about-project {
+		
+	}

@@ -1,0 +1,326 @@
+ #discography{
+ 	background: url(http://i.imgur.com/g1SpJGt.jpg);
+ }
+
+ #albums {
+ 	position: fixed;
+ 	height: calc(100% - 6em);
+ 	width: calc(100% - 16em);
+ 	top: 3em;
+ 	left: 8em;
+ 	border-right: 1px solid #ffffff;
+ 	border-left: 1px solid #ffffff;
+ 	border-bottom: 1px solid #ffffff;
+ 	overflow: auto;
+ }
+
+ .album {
+ 	background-color: #700909;
+ 	background-size:90% auto; 
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	margin: 0.25em;
+ 	width: calc(250px - 5em);
+ 	height: calc(250px - 5em);
+ 	box-shadow: 3px 3px 0px #ffffff;
+ 	padding: 0.5em;
+ 	overflow: hidden;
+ 	display: inline-block;
+ }
+
+ #dis {
+ 	position: fixed;
+ 	width: 240px;
+ 	text-align: center;
+ 	top: 1em;
+ 	left: calc(4em + 1px);
+ 	font-size: 2em;
+ 	font-family: "True Lies";
+ 	overflow: hidden;
+ }
+
+ #dis:before {
+ 	content: "";
+ 	width: 1em;
+ 	height: 1px;
+ 	background: #ffffff;
+ 	position: absolute;
+ 	top:calc(50% - 3px);
+ 	left: 0em;
+ }
+
+ #line {
+ 	width: calc(100% - 8em - 340px);
+ 	height: 1px;
+ 	background: #ffffff;
+ 	position: fixed;
+ 	top:calc(2em + 15px);
+ 	left:calc(8em + 214px);
+ 	display: block;
+ }
+
+ .album-info {
+ 	width: calc(100% - 2px);
+ 	height: calc(100% - 1px);
+ 	display: block;
+ 	background: #700909;
+ 	opacity: 0;
+ 	transition: 0.5s;
+ 	position: relative;
+ 	overflow: hidden;
+ }
+
+ .album:hover .album-info {
+ 	opacity: 1;
+ }
+
+ .album-name {
+ 	font-family: "Playfair Display", sans-serif;
+ 	display: block;
+ 	font-size: 1.5em;
+ 	font-style: italic;
+ 	font-weight: bold;
+ 	margin-top: 40%;
+ 	color: #ffffff;
+ }
+
+.al div::after {
+ 	clear: both;
+ 	display: table;
+ 	content: "";
+ }
+
+.al div {
+ 	position: relative;
+ 	color: #333333;
+ 	font-size: 0.9em;
+ }
+
+.al {
+ 	position: relative;
+ 	left: 3em;
+ 	top:3em;
+ 	width: calc(100% - 6em);
+ 	background: #ffffff;
+ 	height: calc(100% - 6em);
+ 	overflow: hidden;
+ 	border-radius: 1em;
+ 	-webkit-box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.5);
+ }
+
+ .al iframe {
+ 	position: absolute;
+ }
+
+ #album-info b {
+ 	color: #700909;
+ 	font-size: 1.2em;
+ }
+
+ #album-info {
+ 	float: left;
+ 	position: relative;
+ 	width: calc(30% - 2em);
+ 	height: 555px;
+ 	padding:1em;
+ 	color: #ffffff;
+ 	background: url(http://i.imgur.com/2QRyK3D.png) right no-repeat #000000;
+ 	background-size: 100% auto;
+ }
+
+ #album-info a {
+ 	text-shadow: 2px 2px 0px #ffffff;
+ }
+
+ #album-info .album-name {
+ 	position: absolute;
+ 	top:10%;
+ 	left: 80px;
+ 	width: 550px;
+ 	font-family: "True Lies";
+ 	font-size: 4em;
+ 	color: #700909;
+ 	text-shadow: 0px 5px 0px #ffffff;
+ 	-webkit-transform: rotate(-90deg);
+ 	-moz-transform: rotate(-90deg);
+ 	-o-transform: rotate(-90deg);
+ 	-ms-transform: rotate(-90deg);
+ 	transform: rotate(-90deg);
+ }
+
+ #play {
+ 	width: 70%;
+ 	float: right;
+ }
+
+ #sorter {
+ 	position: fixed;
+ 	bottom: 2.5em;
+ 	left: 1em;
+ 	text-align: center;
+ 	width: 6em;
+ }
+
+ #sorter .sort {
+ 	display: block;
+ 	margin: 0.2em auto;
+ 	padding:0.5em;
+ 	cursor: crosshair;
+ }
+
+ .valign {
+ 	position: absolute;
+ 	bottom: -2.5em;
+ 	left: 0.5em;
+ 	text-align: justify;
+ 	transition: 1s;
+ }
+
+ .album:hover .album-info .valign {
+ 	bottom: 0.3em;
+ }
+
+ #album-close {
+ 	padding:0.5em 1em;
+ 	margin:0.5em;
+ 	display: block;
+ 	width: 100px;
+ 	color: #ffffff
+ }
+
+ .tracklist ol li, .basic {
+ 	color: #ffffff!important;
+ }
+
+#album-comments {
+position: fixed;
+width: calc(100% - 10em);
+height: calc(100% - 10em);
+color:#ffffff;
+background:#000000;
+border-radius: 20px;
+top: 3em;
+left: 3em;
+z-index:99999999;
+padding:2em;
+display:none;
+}
+
+#album-comments:target {
+
+display:block;
+}
+
+ @media (max-width: 600px) {
+
+ 	#sorter, #dis {
+ 		width: calc(100% - 300px);
+ 		left: 280px!important;
+ 	}
+
+ 	#dis {
+ 		position: relative;
+ 		font-size: 1.5em;
+ 	}
+
+ 	#dis::before, #line {
+ 		display: none;
+ 	}
+
+ 	#albums {
+ 		width: 250px;
+ 		left: 1em;
+ 		top: 4em;
+ 		border: 1px solid #ffffff;
+ 	}
+
+ 	#album-info {
+	 	float: none;
+	 	position: relative;
+	 	width: 100%;
+	 	height: 40%;
+	 	color: #000000;
+	 	padding: 0px;
+	 	background: url() right no-repeat #ffffff;
+	 }
+
+	 .tracklist {
+	 	float: right;
+	 	width: calc(50% - 2em);
+	 	height: calc(100% - 6em);
+	 	padding: 1em;
+	 	overflow: auto;
+	 	background: #700909;
+	 }
+
+	 .tracklist b {
+	 	color: #ffffff!important;
+	 }
+
+	 .basic {
+	 	float: left;
+	 	width: calc(50% - 2em);
+	 	height: calc(100% - 6em);
+	 	overflow: auto;
+	 	background: #000000;
+	 	padding: 1em;
+	 	color: #ffffff!important;
+
+	 }
+
+	  #album-info .album-name {
+	 	position: relative;
+	 	top:0px;
+	 	left: 0px;
+	 	margin-top: 0px;
+	 	width: calc(100% - 1em);
+	 	background: #ffffff;
+	 	text-align: center;
+	 	font-size: 2em;
+	 	padding: 0.5em;
+	 	color: #700909;
+	 	-webkit-transform: rotate(0deg);
+	 	-moz-transform: rotate(0deg);
+	 	-o-transform: rotate(0deg);
+	 	-ms-transform: rotate(0deg);
+	 	transform: rotate(0deg);
+	 }
+
+	 #play {
+	 	width: 100%;
+	 	float: left;
+	 	height: 50%;
+	 }
+
+	 .al iframe {
+	 	position: absolute;
+	 	height: calc(100% + 3em)!important;
+	 }
+
+}
+
+@media (max-width: 430px) {
+	.album {
+
+ 	width: calc(180px - 5em);
+ 	height: calc(180px - 5em);
+	}
+
+ 	#albums {
+ 		width: 180px;
+ 		left: 1em;
+ 		top: 1em;
+ 		height: calc(100% - 2em - 2px);
+ 		border: 1px solid #ffffff;
+ 	}
+
+ 	#sorter {
+ 		left: 210px!important;
+ 		font-size: .8em;
+ 		width: calc(100% - 200px - 2em);
+ 	}
+
+
+}

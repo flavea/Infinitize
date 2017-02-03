@@ -1,0 +1,181 @@
+@media (min-width: 768px) and (min-height: 768px) {
+
+	.big-menu-bg, .about-bg, #front-page, #awards, #subunit, #mv, #disco, #concerts, #news {
+		background-size: auto 100%;
+		background-position: center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.big-menu-bg, .about-bg, #front-page, #awards, #subunit, #mv, #disco, #concerts, #news {
+		background-size: auto 100%;
+	}
+
+	#site-tag {
+
+		margin:1em 0 20% 0;
+	}
+
+	#front-box {
+		font-size: 1em!important;
+	}
+
+	#mobile-menu-front {display: block;}
+	#bullet-menu {display: none;}
+}
+
+@media (max-width: 800px) {
+
+	#hamburger {
+		right: 1em;
+	}
+
+	#site-tag {
+
+		margin:1em 0 10% 0;
+	}
+
+	.left, .right {
+		float: none;
+	}
+
+
+	#front-box {
+		position: fixed;
+		width:50%;
+		font-size: .7em;
+		top: 30%;
+		left:25%;
+	}
+
+	.title {
+		font-size: 5em;
+	}
+
+	.modal-menu a {
+		font-size: 1.6em;
+	}
+	
+	#site-tag, #credit {
+		font-size: .7em;
+	}
+
+	#inspirit-tag, #about-tag {
+		letter-spacing: 2px;
+		width: 10em;
+	}
+
+	#about-tag {
+	    top:calc(40% + 1.5em);
+	    left:-5.5em;
+	}
+
+	#inspirit-tag {
+	    top:calc(40% + 3em);
+	    left:-4.5em;
+	}
+
+	#mobile-menu-front {display: block;}
+	#bullet-menu {display: none;}
+
+	#bigMenu .right, #main-menu .left {
+		float: none!important;
+	}
+
+	#secondary-menu {
+		width: 100%;
+		margin-top:0%;
+		margin-right: 0%;
+	}
+
+	.modal-menu > #menu-content > #main-menu > a {
+		width:100%;
+	}
+
+	.menu {
+		background: transparent;
+		width: 100%;
+		padding: 0;
+		width:100%;
+		margin: 0;
+		text-align: left;
+		display: block;
+		font-family: "True Lies", Serif;
+		color: #ffffff;
+		font-size: 2em!important;
+	}
+
+	.menu::before {
+		float: left;
+		height:3px;
+		width: 5%;
+		background: #ffffff;
+		content: "";
+		margin-top: 0.5em;
+		margin-right: 0.5em;
+		-webkit-transition: width 400ms ease-in;
+		-moz-transition: width 400ms ease-in;
+		transition: width 400ms ease-in;
+	}
+
+	.menu:hover::before {
+		display: inline-block;
+		width: 15%;
+	}
+
+
+}
+
+@media (max-height: 580px) {
+	#front-box {
+		top:25%;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.title {
+		font-size: 4em;
+	}
+
+	#front-box {
+		font-size: .6em!important;
+	}
+	#ms-links {
+		float: right;
+	}
+	#about-content {
+		width:80%;
+		margin:30% auto;
+	}
+
+	.modal-title {
+		font-size: 2em;
+	}
+
+	#main-menu a {
+		font-size: 1.5em!important;
+	}
+
+	.menu {
+
+		font-size: 1.5em!important;
+	}
+
+	.name {
+		font-size: 3em;
+	}
+
+	.boxes {
+		width: calc(100% - 2em);
+		margin: 1em;
+		display: block;
+	}
+
+	.c-menu {
+		top: 1em;
+		right: 1em;
+		margin: 10px!important;
+		background: transparent;
+	}
+}

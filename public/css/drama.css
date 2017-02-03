@@ -1,0 +1,79 @@
+#drama {
+	background-color: #2c2c2c;
+	padding: 5em 10em;
+	font-size: 0.8em;
+}
+
+.drama {
+	display: block;
+	margin:05em auto;
+	width: 60%;
+}
+
+.drama img {
+	border: 5px solid #700909;
+	margin: 0.5em;
+}
+
+.roll {
+	width: 4em;
+	height: 100%;
+}
+
+.roll-box {
+	width: 2em;
+	height: 1.2em;
+	background: #ffffff;
+	border:1em solid #000000;
+	margin-bottom: 0px;
+}
+
+
+	#show-detail {
+		width: 60%;
+		margin: 3em auto;
+	}
+
+	.boxs {
+		margin: 1em auto;
+		background: #222222;
+	}
+
+	#detail-head {
+		text-align: center;
+		margin: 20% auto;
+	}
+
+@media (max-width: 1024px) {
+	#show-detail {
+		width: 80%;
+	}
+	.drama {
+		width: 95%
+	}
+
+	.drama img {
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.roll {
+		display: none;
+	}
+	#show-detail {
+		width: 80%;
+	}
+
+	#drama {
+		padding: 6em 1em;
+	}
+	.drama {
+		width: 100%!important;
+	}
+
+	.drama img {
+		display: block;
+		width: 100px;
+	}
+}

@@ -1,0 +1,116 @@
+#news {
+	background-image: url(http://i.imgur.com/g17tABL.jpg);
+	min-height: 100hv;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+.news-content {
+	background: #000000;
+	padding: 2em;
+	width: 60%;
+	margin: auto;
+	line-height: 1.5em;
+}
+
+.news-content h2 {
+	font-size: 3em;
+}
+
+#news-menu {
+	position: fixed;
+	left: 20%;
+	margin-left:-2.5em;
+	text-align: center;
+}
+
+#news-menu a {
+	color: #ffffff;
+	margin: 0px 1em;
+}
+
+#news-tag {
+	text-align: center;
+	margin: 20% auto;
+}
+
+#news-tag span {
+	padding: .1em 1em;
+	font-size: 3em;
+	border: 5px solid #ffffff;
+	margin-bottom: 2em;
+}
+
+.news-content blockquote {
+	border-left: 1px dotted #270303;
+	padding-left: 1em;
+}
+
+.meta a {
+	color: #ffffff;
+	border-radius: 2em;
+	display: inline-block;
+	padding: 0.5em 2em;
+	margin: 1em 1em 1em 0;
+	font-size: .8em;
+	text-transform: lowercase;
+}
+
+a h2 {
+	color: #ffffff;
+	margin-top: 0;
+	line-height: 1.8em;
+}
+
+.post {
+	border-bottom: 1px dotted #270303;
+	margin: 2em;
+	padding-bottom: 2em;
+	font-size: .8em;
+}
+
+.n-menu {
+	display: none!important;
+}
+
+@media (max-width: 600px) {
+	.news-content {
+		width: calc(100% - 2em);
+		padding: 1em;
+	}
+
+	.news-content h2 {
+		font-size: 2em;
+		line-height: 1em;
+	}
+
+	blockquote {
+		padding: 0;
+		left: 0;
+		border: none;
+	}
+
+	.n-menu {
+		display: block!important;
+	}
+
+	#news-menu {
+		display: none;
+	}
+
+	#news {
+		background-image: url(http://i.imgur.com/g17tABL.jpg);
+		background-size: auto 100%;
+		background-position: center;
+	}
+
+	#news-tag {
+		margin: 50% auto;
+		width: 90%;
+	}
+}

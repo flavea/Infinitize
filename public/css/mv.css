@@ -1,0 +1,98 @@
+#mv {
+	overflow: auto;
+	background-image:url(http://i.imgur.com/A6u9ct5.jpg);
+}
+
+#mv-tag {
+	position: fixed;
+	border-right: 1px solid #ffffff;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	padding: 1em;
+	width: 1em;
+	height: 100%;
+}
+
+#mv-tag span {
+	display: block;
+	letter-spacing: 5px;
+	position: relative;
+	top: 50%;
+	text-align: right;
+}
+
+#mv-content {
+	margin-left: calc(3em + 1px);
+	width: calc(100% - 3em - 1px);
+	position: relative;
+}
+
+.vid {
+	padding: 2em;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	width: calc(100%/3 - 4em - 1px);
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.vid:first-child {
+	width: calc((100%/3)*2 - 4em - 1px);
+}
+
+.vid iframe {
+	height: 200px;
+	width: 100%;
+}
+
+.vid:first-child iframe {
+	height: calc(400px + 4em + 5px);
+	width: 100%;
+}
+
+.video-tag {
+	position: absolute;
+	left: 0;
+	bottom: -10em;
+	background: rgba(0,0,0,.6);
+	padding: 1em;
+	width: calc(100% - 2em);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+.vid:hover .video-tag {
+	bottom: 0;
+}
+.video-tag h2 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+@media (max-width: 800px) {
+	#mv {
+		overflow: auto;
+		background-image:url(http://i.imgur.com/A6u9ct5.jpg);
+		background-position: center;
+		background-size: auto 100%;
+	}
+
+	.vid, .vid:first-child {
+		width: calc(100% - 2em);
+		display: block;
+		height: auto;
+		padding: 1em;
+	}
+
+	.vid iframe, .vid:first-child iframe {
+		height: 250px;
+	}
+
+	.video-tag {
+		position: relative;
+		bottom: 0;
+	}
+}
